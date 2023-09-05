@@ -1,0 +1,864 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+@font-face {
+    font-family: "Robecha";
+    src: url(/fonts/RobechaDaniera-mLB2j.ttf);
+}
+:root {
+    --font-family: 'JetBrains Mono', monospace; ;
+    --font-family2:"Robecha";
+    --color: #AC814C;
+    --color2:#3444D7;
+}
+body{
+       background-color: black;
+}
+
+/* ----------------------------------------------nav------------------------------------------------- */
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: black;
+    margin-block-start: 5%;
+}
+.menu {
+    font-family: var(--font-family);
+    font-size: 1.2em;
+    color:white;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+.menu  a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul{
+    list-style-type: none
+}
+
+.menu ul li{
+    width: 150%;
+    height: 50px;
+}
+
+.about :hover {
+  color: var(--color);
+  scale: 1.08;
+    
+}
+.company :hover {
+    color: var(--color);
+    scale: 1.08;
+      
+  }
+ #shopy :hover{
+    color: var(--color);
+    scale: 1.08;
+      
+  }
+  .burguer{
+    display: none;
+  }
+
+/* -----------------DROPDOWN---------------------------- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--font-family);
+    font-size: 18px;
+  }
+  .dropdown-content a:hover {background-color:var(--color)}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+  color: white;
+}
+/*-----------------mediaquerys------------------------------------*/
+@media (min-width: 768px) and (max-width: 1012px){
+    .menu{
+        width: 40%;
+        column-gap: 2%;  
+    }
+}
+
+@media (max-width:768px){
+.about, .company, .dropdown {
+    display: none;
+}
+nav{
+/*background-color: yellow;*/
+justify-content: flex-end;
+column-gap: 1%;
+}
+#burguericon{
+    width: 3em;
+}
+
+/* -----------------DROPDOWN2---------------------------- */
+.burguer {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .burguer-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .burguer-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--font-family);
+    font-size: 18px;
+  }
+  .burguer-content a:hover {background-color:var(--color)}
+
+.burguer:hover .buguer-content {
+  display: block;
+}
+
+.burguer:hover .dropbtn {
+  background-color: #3e8e41;
+  color: white;
+}
+
+
+}
+
+/* ---------------------------------------------HEADER------------------------------------------------ */
+.cabecera {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cabecera h1{
+    font-family: var(--font-family2);
+    font-size: 6em;
+    color: white;
+    font-weight: 100;
+}
+.cabecera p {
+    font-family: var(--font-family);
+    color: white;
+    font-weight: 100;
+    font-size: 1.5em;
+    margin-block-start: 0.8%;
+}
+/*-----------------mediaquerys------------------------------------*/
+ 
+@media (min-width: 768px) and (max-width: 1012px) {
+    .cabecera{
+        height: 20vh;
+    }
+    
+     .cabecera h1{
+            font-family: var(--font-family2);
+            font-size: 5em;
+            color: white;
+            font-weight: 100;
+            text-align: center;
+          
+        }
+     .cabecera p{
+            font-size: 1.4em;
+    
+        }
+    }
+
+@media (min-width: 610px) and (max-width: 768px) {
+.cabecera{
+    height: 20vh;
+}
+
+ .cabecera h1{
+        font-family: var(--font-family2);
+        font-size: 5em;
+        color: white;
+        font-weight: 100;
+        text-align: center;
+      
+    }
+ .cabecera p{
+        font-size: 1.4em;
+
+    }
+}
+@media (min-width: 420px) and (max-width: 610px){
+    .cabecera h1{
+        font-size: 12vw;
+    }
+    .cabecera p{
+        font-size: 1em;
+    }
+   
+}
+@media (min-width: 320px) and (max-width: 420px){
+    .cabecera h1{
+        font-size: 12vw;
+    }
+    .cabecera p{
+        font-size: 1em;
+    }
+   
+}
+
+/* ------------------------------------------PRESENTACION----------------------------------------------- */
+
+.renovarse {
+    width: 100%;
+    height: 900px;
+    background-image: url(/imagenes/fotofamilia.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1%;
+}
+
+.textointrozi {
+    width: 50%;
+    height: 600px;
+    background-color:  hsla(5, 5%, 1%, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 1%;  
+}
+
+#logo {
+    width: 10vw;
+    animation: mymove 4s infinite;
+    transition-delay: 2s
+}
+@keyframes mymove {
+    80% {transform: rotate(360deg);}
+  }
+.textointrozi h2{
+    font-family: var(--font-family2);
+    color: var(--color);
+    font-weight: 100;
+    font-size: 4em;
+    padding-top: 0;
+
+}
+
+.textointrozi p{
+    font-family: var(--font-family);
+    color: white;
+    font-weight: 50;
+    font-size: 1.3em;
+    padding-top: 0;
+    width: 32vw;
+    text-align: center;
+    margin: 5%;
+
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .textointrozi{
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.7em; 
+        row-gap: 5%;
+    }
+    .renovarse{
+        margin-top: 0%;
+        background-size:cover;
+    }
+    .textointrozi p{
+        width: 40vh;
+        font-size: 1.1em;  
+    }
+    #logo{
+        width: 10em;
+    }
+    #estrella{
+        width: 8%;
+    }
+}
+
+@media (min-width: 610px) and (max-width: 768px) {
+    .renovarse{
+        margin-top: 0%;
+        background-size:cover;
+    }
+    .textointrozi h2{
+        font-size: 3.5em;
+        text-align: center;
+        width: 50vh;
+        line-height: 0.8em;
+       
+    }
+    .textointrozi{
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.5em; 
+        row-gap: 5%;
+    }
+    
+    .textointrozi h2{
+        font-size: 3.5em;
+        text-align: center;
+        width: 50vh;
+        line-height: 0.8em;
+       
+    }
+
+    .textointrozi p{
+        width: 40vh;
+        font-size: 1em; 
+        
+    }
+    #logo{
+        width: 10em;
+    }
+    #estrella{
+        width: 9%;
+    }
+}
+@media (min-width: 420px) and (max-width: 610px){
+    .renovarse{
+        margin-top: 0%;
+        background-size:cover;
+    }
+    .textointrozi{
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.5em; 
+        row-gap: 5%;
+    }
+    
+    .textointrozi h2{
+        font-size: 3em;
+        text-align: center;
+        width: 50vh;
+        line-height: 1em; 
+       
+    }
+
+    .textointrozi p{
+        width: 40vh;
+        font-size: 1em; 
+        
+    }
+    #logo{
+        width: 10em;
+    }
+    #estrella{
+        width: 9%;
+    }
+
+}
+@media (min-width: 320px) and (max-width: 420px){
+    .renovarse{
+        margin-top: 0%;
+        background-size:cover;
+    }
+    .textointrozi{
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.5em; 
+        row-gap: 5%;
+    }
+    
+    .textointrozi h2{
+        font-size: 3em;
+        text-align: center;
+        width: 30vh;
+        line-height: 1em; 
+       
+    }
+
+    .textointrozi p{
+        width: 30vh;
+        font-size: 1em; 
+        
+    }
+    #logo{
+        width: 9em;
+    }
+    #estrella{
+        width: 9%;
+    }
+
+}
+
+/* ------------------------------------------columnas----------------------------------------------- */
+.columnas {
+    width: 100%;
+    height: 400px;
+    color: white; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    row-gap: 10%;
+    padding: 7%;
+    margin-block-start: 5%;
+}
+.columna1{
+    width: 30%;
+    font-family:var(--font-family);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: justify;
+}
+
+.lafamilia{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 8%;
+    margin-block-end: 5%;
+
+}
+
+#familia{
+font-family: var(--font-family2);
+color: #AC814C;
+font-weight: 100;
+font-size: 4em;
+
+}
+@media (min-width: 1200px){
+    .columnas{
+        flex-direction: row;
+        align-items: center;
+        margin-block-start: 0%;
+        column-gap: 10%;
+        
+    }
+    .columna1{
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1200px){
+    .columnas{
+        flex-direction: row;
+        align-items: center;
+        padding: 5%;
+        margin-block-start: 0%;
+        column-gap: 10%;
+    }
+    .columna1{
+        font-size: 0.9em;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #familia{
+        font-family: var(--font-family2);
+        color: #AC814C;
+        font-weight: 100;
+        font-size: 3em;
+        
+        }
+    .arrow{
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 610px) and (max-width: 768px){
+    .columna1{
+        font-size: 0.9em;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    .columnas{
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+        margin-block-start: 0%;
+    }
+    #familia{
+        font-family: var(--font-family2);
+        color: #AC814C;
+        font-weight: 100;
+        font-size: 3em;
+        
+        }
+    .arrow{
+        width: 50%;
+    }
+    }    
+
+    @media (min-width: 420px) and (max-width: 610px){
+        .columna1{
+            font-size: 0.9em;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        .columnas{
+            flex-direction: column;
+            align-items: center;
+            padding: 5%;
+            margin-block-start: 0%;
+        }
+        #familia{
+            font-family: var(--font-family2);
+            color: #AC814C;
+            font-weight: 100;
+            font-size: 3em;
+            margin-block-start: 15%;
+            
+            }
+        .arrow{
+            display: none;
+        }
+        } 
+        @media (min-width: 320px) and (max-width: 420px){
+            .columna1{
+                font-size: 0.9em;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              
+            }
+            .columnas{
+                flex-direction: column;
+                align-items: center;
+                padding: 5%;
+                margin-block-start: 0%;
+            }
+            #familia{
+                font-family: var(--font-family2);
+                color: #AC814C;
+                font-weight: 100;
+                font-size: 3em;
+                margin-block-start: 15%;
+                
+                }
+            .arrow{
+                display: none;
+            }
+            } 
+
+
+/* ------------------------------------------PERSONAJES Y COMPRA------------------------------------------ */
+
+.titulo{
+    color: white;
+    font-family: var(--font-family2);
+    font-weight:lighter;
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    
+}
+.personaje{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5%;
+    margin-bottom: 5%;
+ 
+}
+
+@keyframes mover{
+     0%{
+        transform:translate(-150%);
+     }
+}
+.retrato1{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.vinos{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10%;
+}
+.venta{
+    font-family: var(--font-family);
+    font-weight: 100;
+    color: white;
+    width:50%;
+    text-align:start;
+}
+.botones{
+    margin-top: 9%;
+    display: flex ;
+    flex-direction: column;
+    column-gap: 5%;
+   
+}
+.dor{
+    color: var(--color);
+}
+.blue{
+    color: var(--color2);
+}
+.oferta{
+    display: flex;
+    margin-bottom: 5%;
+}
+input {
+        border:none;
+        background-color: black;
+        border: 0;
+        color: white;
+        width: 15%;
+        margin-left: 1%;
+}
+button{
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-family: var(--font-family2);
+    font-size: 2em;
+    border-radius: 20px;
+    width: 60%;
+    height: 90%;
+    margin-top: 20%;
+}
+.cantidades{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+  
+}
+select{
+    background-color: black;
+    color: white;
+    
+}
+#suma, #suma2, #suma3, #suma4 {
+    background-color: var(--color);
+    width: 20%;
+    height: 20px;
+    font-family: var(--font-family);
+    font-size: 1em;
+}
+.subtotal{
+    display: flex;
+}
+@media (min-width: 768px) and (max-width: 1200px){
+   .personaje{
+    display: flex;
+    column-gap: 15%;
+   }
+   .vinos{
+    width: 100%;
+    margin-top: 10%;
+    align-items: center;
+   }
+
+}
+@media (min-width: 610px) and (max-width: 768px){
+    .titulo{
+        font-size: 3.5em;
+        padding: 2%;
+        text-align: center;
+    }
+    .retrato1{
+        width: 2%;
+        height: 500px;
+    }
+   .personaje{
+    display: flex;
+    flex-direction: column;
+    column-gap: 20%;
+    margin-bottom: 8%;
+    align-items:center;
+   }
+   .vinos{
+    width: 100%;
+    margin-top: 10%;
+    align-items: center;
+   }
+}
+@media (min-width: 420px) and (max-width: 610px){
+    .titulo{
+        font-size: 3em;
+        padding: 2%;
+        text-align: center;
+    }
+    .retrato1{
+        display: none;
+    }
+   .personaje{
+    display: flex;
+    flex-direction: column;
+    column-gap: 20%;
+    margin-bottom: 20%;
+    align-items:center;
+   }
+   .vinos{
+    width: 100%;
+    margin-top: 10%;
+
+    }
+}
+@media (min-width: 320px) and (max-width: 420px){
+    .titulo{
+        font-size: 2.3em;
+        padding: 2%;
+        text-align: center;
+    }
+    .retrato1{
+        display: none;
+    }
+   .personaje{
+    display: flex;
+    flex-direction: column;
+    column-gap: 20%;
+    margin-bottom: 20%;
+    align-items:center;
+   }
+   .vinos{
+    width: 100%;
+    margin-top: 10%;
+
+    }
+}
+
+/* ------------------------------------------renovarse------------------------------ */
+
+.final{
+    color: white;
+    font-family: var(--font-family2);
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    margin-top: 9%;
+    margin-bottom: 5%;
+}
+
+.flash{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    column-gap: 1%;
+}
+.giif{
+    width: 50%;
+    height: 600px;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.giif img{
+    width: 90%
+}
+@media (min-width: 610px) and (max-width: 768px){
+
+    .final{
+        font-size: 3em;
+        text-align: center;
+    }
+    .giif{
+        height: 200px;
+    }
+
+
+}
+@media (min-width: 420px) and (max-width: 610px){
+
+    .final{
+        font-size: 2.2em;
+        text-align: center;
+    }
+    .giif{
+        height: 200px;
+    }
+
+}
+@media (min-width: 320px) and (max-width: 420px){
+
+    .final{
+        font-size: 2.2em;
+        text-align: center;
+    }
+    .giif{
+        height: 200px;
+    }
+
+}
+
+
+
+
+

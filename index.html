@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Bronte's Wine Emporium</title>
+</head>
+<body>
+    <section> 
+        <!-- ------------------------NAV----------------------------------- -->
+        <nav> 
+            <ul class="menu">
+                <div class="about"><li><a href="#logo"> about</a></li></div>
+                <div class="company"> <li><a href="#columna"> history</a></li> </div>   
+                <div class="dropdown"><li id="shopy" ><a href="#"> shop</a></li>
+                    <div class="dropdown-content">
+                    <a href="#mysyra">Syrah</a>
+                    <a href="#mytempranillo">Tempranillo</a>
+                    <a href="#mycabernet">Cabernet</a>
+                    <a href="#mymerlot">Merlot</a>
+                    </div>
+                </div>
+                <div class="burguer"><li><a  id="burguericon" href="#"> &#9776 </a></li> 
+                    <div class="burguer-content">
+                        <a href="#mysyra">Syrah</a>
+                        <a href="#mytempranillo">Tempranillo</a>
+                        <a href="#mycabernet">Cabernet</a>
+                        <a href="#mymerlot">Merlot</a>
+                    </div>
+                </div>
+                
+                <li><img src="/imagenes/carrito.png" alt="carritocompra"> </li>
+            </ul>
+            <div id="menu-vinos" style="display: none;"></div>
+            
+        </nav>
+       
+          <!-- ------------------------HEADER----------------------------------- -->
+        <header class="cabecera">
+            <h1> La Familia Bronte </h1>
+            <p>Vino de la tierra de Castilla</p>
+        </header>
+          <!-- ------------------------PRESENTACION---------------------------------- -->
+        <div class="renovarse">
+            <div class="textointrozi">
+                <img id="logo" src="/imagenes/logo.png" alt="logo">
+                <h2>Renovarse o morir</h2>
+                <p>¿Te has preguntado últimamente como te ven los demás? 
+                    Renovarse o morir. Todos sabemos que los cambios a veces son necesarios. 
+                    No te conformes con lo que eras, porque hoy puedes ser mucho mejor. </p>
+                <img id="estrella" src="/imagenes/Star 1.png" alt="estrella">
+
+            </div>
+            </div>
+        </div>
+         <!-- ------------------------TEXT COLUMNS---------------------------------- -->
+        <div class="columnas" id="columna">
+            <div class="columna1">
+                <p>En lo alto de una colina se alzaba un castillo ancestral, un tesoro viviente 
+                que guardaba secretos de siglos pasados. Dentro de sus muros, los vinos Bronte 
+                eran creados con pasión y destreza, como verdaderas obras renacentistas. </p>
+            </div>
+            <div class="columna1">
+                <p>Los vinos Bronte, como una galería de arte enológico, brindaban 
+                        a los paladares una experiencia inigualable. Cada copa era un viaje al pasado, 
+                        donde la pasión renacentista y los personajes se unían en armonía. </p>
+            </div>
+        </div>
+        <div class="lafamilia">
+            <h2 id="familia">LA FAMILIA</h2>
+            <img class="arrow" src="/imagenes/Arrow 1.svg" alt="">
+        </div>
+       
+         <!-- ------------------------PERSONAJE SYRA---------------------------------- -->
+         <div class="titulo" id="mysyra">
+            <p>LA DOMINATRIX: Syra </p>
+         </div>
+         <div class="personaje">
+            <div class="retrato1"><img id="animado" src="/imagenes/SYRAH.png" alt=""></div> 
+            <div class="vinos">
+                <div class="botella"><img src="/imagenes/botsyra.png" alt=""></div>
+                <div class="venta">
+                    <p> <span class="dor"> SYRAH<br>
+                        2009<br><br>
+                        </span> 
+                        <span class="blue"> 75cl 13%vol<br><br>
+                        </span>
+                        Tinto joven elaborado a partir de la variedad de
+                        uva SYRAH. <br> <br>Vino de intenso color frambuesa,
+                        con aromas sugerentes a violeta, ciruela y
+                        frutos negros del bosque.
+                        </p>
+                    <div class="botones"> 
+                        <div class="oferta">
+                            <label for="precio">Precio:</label>
+                            <input name="precio" type="text" id="precio" value="8.90" disabled><p>€</p>
+                        </div>
+                        <div class="cantidad"> 
+                            <label for="suma">Uds: </label>
+                            <input type="number" name="suma" onchange="carro()" id="suma" min="0">
+                        </div>
+                        <div class="subtotal">
+                            <label for="subt">Subtotal:</label>
+                            <input name="subt" type="text" id="subtotal"  disabled><p>€</p>
+                        </div>    
+                        <button id="añadir" class="addtocart" > Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+          <!-- ------------------------PERSONAJE TEMPRANILLO---------------------------------- -->
+
+          <div class="titulo"  id="mytempranillo">
+            <p>EL PUNTUAL: Tempranillo </p>
+         </div>
+         <div class="personaje">
+            <div class="retrato1"><img src="/imagenes/temmpranillo.png" alt=""></div> 
+            <div class="vinos">
+                <div class="botella"><img src="/imagenes/bottempra.png" alt=""></div>
+                <div class="venta">
+                    <p> <span class="dor"> SYRAH<br>
+                        2009<br><br>
+                        </span> 
+                        <span class="blue"> 75cl 13%vol<br><br>
+                        </span>
+                        Tinto joven elaborado a partir de la variedad de
+                        uva SYRAH. <br> <br>Vino de intenso color frambuesa,
+                        con aromas sugerentes a violeta, ciruela y
+                        frutos negros del bosque.
+                        </p>
+                    <div class="botones"> 
+                        <div class="oferta">
+                            <label for="precio">Precio:</label>
+                            <input name="precio2" type="text" id="precio2" value="6.50" disabled><p>€</p>
+                        </div>
+                        <div class="cantidades"> 
+                            <label for="suma2">Uds: </label>
+                            <input type="number" name="suma2" onchange="carro2()" id="suma2" min="0">
+                        </div>
+                        <div class="subtotal">
+                            <label for="subt">Subtotal:</label>
+                            <input name="subt" type="text" id="subtotal2"  disabled><p>€</p>
+                        </div>    
+                        <button id="añadir"  class="addtocart" > Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------PERSONAJE CABERNET--------------------------------- -->
+
+          <div class="titulo"  id="mycabernet">
+            <p>LA CABARETERA: Cabernet </p>
+         </div>
+         <div class="personaje">
+            <div class="retrato1"><img src="/imagenes/cabernet.png" alt=""></div> 
+            <div class="vinos">
+                <div class="botella"><img src="/imagenes/botcaber.png" alt=""></div>
+                <div class="venta">
+                    <p> <span class="dor"> SYRAH<br>
+                        2009<br><br>
+                        </span> 
+                        <span class="blue"> 75cl 13%vol<br><br>
+                        </span>
+                        Tinto joven elaborado a partir de la variedad de
+                        uva SYRAH. <br> <br>Vino de intenso color frambuesa,
+                        con aromas sugerentes a violeta, ciruela y
+                        frutos negros del bosque.
+                        </p>
+                    <div class="botones"> 
+                        <div class="oferta">
+                            <label for="precio">Precio:</label>
+                            <input name="precio3" type="text" id="precio3" value="5.75" disabled><p>€</p>
+                        </div>
+                        <div class="cantidades"> 
+                            <label for="suma3">Uds: </label>
+                            <input type="number" name="suma3" onchange="carro3()" id="suma3" min="0">
+                        </div>
+                        <div class="subtotal">
+                            <label for="subt">Subtotal:</label>
+                            <input name="subt" type="text" id="subtotal3"  disabled><p>€</p>
+                        </div>    
+                        <button id="añadir"  class="addtocart" > Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- ------------------------PERSONAJE MERLOT--------------------------------- -->
+
+<div class="titulo" id="mymerlot">
+    <p>El Mago: Merlot </p>
+ </div>
+ <div class="personaje">
+    <div class="retrato1"><img src="/imagenes/merlot.png" alt=""></div> 
+    <div class="vinos">
+        <div class="botella"><img src="/imagenes/botmerlot.png" alt=""></div>
+        <div class="venta">
+            <p> <span class="dor"> SYRAH<br>
+                2009<br><br>
+                </span> 
+                <span class="blue"> 75cl 13%vol<br><br>
+                </span>
+                Tinto joven elaborado a partir de la variedad de
+                uva SYRAH. <br> <br>Vino de intenso color frambuesa,
+                con aromas sugerentes a violeta, ciruela y
+                frutos negros del bosque.
+                </p>
+            <div class="botones"> 
+                <div class="oferta">
+                    <label for="precio">Precio:</label>
+                    <input name="precio4" type="text" id="precio4" value="9.75" disabled><p>€</p>
+                </div>
+                <div class="cantidades"> 
+                    <label for="suma4">Uds: </label>
+                    <input type="number" name="suma4" onchange="carro4()" id="suma4" min="0">
+                </div>
+                <div class="subtotal">
+                    <label for="subt">Subtotal:</label>
+                    <input name="subt" type="text" id="subtotal4"  disabled><p>€</p>
+                </div>    
+                <button id="añadir" class="addtocart" > Añadir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------renovarse--------------------------------- -->
+    <div class="final">
+     <p>"UNA OBRA RE-NACENTISTA EN CADA COPA"</p>
+    </div>
+    <div class="flash">
+        <div class="giif"><img src="/imagenes/gifs/TEMPRANILLO_IG.gif" alt="Tempranillo"></div>
+        <div class="giif"><img src="/imagenes/gifs/SYRAH_IG.gif" alt="Syrah"></div>
+        <div class="giif"><img src="/imagenes/gifs/CHARDONNAY.gif" alt="chardonay"></div>
+    </div>
+
+    </section>
+</body>
+<script src="/vino.js" ></script>
+   
+
+
+
+    
